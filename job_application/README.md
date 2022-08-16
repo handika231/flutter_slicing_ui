@@ -1,16 +1,25 @@
-# job_application
+# FLUTTER UI : Job Application
 
-A new Flutter project.
+### Description
+Slicing UI from Figma, Job Application UI.
 
-## Getting Started
+### Features
+- Check Email Validation
 
-This project is a starting point for a Flutter application.
+### Package
+- google_fonts
+- responsive_framework
 
-A few resources to get you started if this is your first Flutter project:
+### Tech Used
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+ <img src="screenshot/ss6.png" width="200"   /> | <img src="screenshot/ss5.png" width="200" /> | <img src="screenshot/ss4.png" width="200" />|
+
+ <img src="screenshot/ss3.png" width="200"   /> | <img src="screenshot/ss2.png" width="200" /> | <img src="screenshot/ss1.png" width="200" />|
+
+
+
+

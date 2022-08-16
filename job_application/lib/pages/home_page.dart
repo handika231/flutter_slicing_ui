@@ -28,9 +28,7 @@ class HomePage extends StatelessWidget {
             ),
             IconButton(
               icon: const Icon(Icons.search),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+              onPressed: () {},
             ),
             IconButton(
               icon: const Icon(Icons.notifications),
