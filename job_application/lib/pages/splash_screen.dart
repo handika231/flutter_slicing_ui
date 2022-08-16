@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 50,
             ),
             const Text(
-              'Splash Screen',
+              'Future Job',
               style: TextStyle(
                 fontSize: 32,
                 color: AppStyle.whiteColor,
