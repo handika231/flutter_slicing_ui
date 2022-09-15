@@ -5,6 +5,7 @@ Color blackColor = const Color(0xff0D0846);
 Color greyColor = const Color(0xff929292);
 
 Color yellowColor = const Color(0xffFFAB2E);
+Color lightGrey = const Color(0xffE1E1EA);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
