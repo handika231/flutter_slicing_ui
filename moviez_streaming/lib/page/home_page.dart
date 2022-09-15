@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviez_streaming/common/constant.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,23 +24,29 @@ class HomePage extends StatelessWidget {
         left: 24,
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 'Moviez',
                 style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                  color: blackColor,
+                  fontSize: 28,
+                  fontWeight: bold,
                 ),
               ),
+              const SizedBox(
+                height: 4,
+              ),
               Text(
-                'Streaming',
+                'Watch much easier',
                 style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                  color: greyColor,
+                  fontSize: 16,
+                  fontWeight: light,
                 ),
               ),
             ],
