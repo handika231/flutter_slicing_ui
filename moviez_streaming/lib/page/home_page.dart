@@ -32,13 +32,30 @@ class HomePage extends StatelessWidget {
                 top: 30,
                 left: 24,
               ),
-              child: Text(
-                'From Disney',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: blackColor,
-                  fontWeight: bold,
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'From Disney',
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: blackColor,
+                      fontWeight: bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: listFromDisney.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      MovieModel data = listFromDisney[index];
+                      return _fromDisneyContent(data);
+                    },
+                  ),
+                ],
               ),
             )
           ],
@@ -156,6 +173,71 @@ class HomePage extends StatelessWidget {
               )
             ],
           )
+        ],
+      ),
+    );
+  }
+
+  _fromDisneyContent(MovieModel data) {
+    return Container(
+      margin: const EdgeInsets.only(
+        bottom: 30,
+      ),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Image.asset(
+              data.image!,
+              width: 100,
+              height: 127,
+            ),
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                data.title!,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: semiBold,
+                  color: blackColor,
+                ),
+              ),
+              const SizedBox(
+                height: 4,
+              ),
+              Text(
+                data.genre!,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: light,
+                  color: greyColor,
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [1, 2, 3, 4, 5].map((index) {
+                  if (index <= data.rating!) {
+                    return Icon(
+                      Icons.star,
+                      color: yellowColor,
+                    );
+                  } else {
+                    return Icon(
+                      Icons.star,
+                      color: lightGrey,
+                    );
+                  }
+                }).toList(),
+              )
+            ],
+          ),
         ],
       ),
     );

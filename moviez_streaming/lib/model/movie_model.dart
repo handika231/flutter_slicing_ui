@@ -35,8 +35,8 @@ List<MovieModel> listFromDisney = [
   ),
   MovieModel(
     image: 'assets/img-beauty.png',
-    title: 'Bohemian',
-    genre: 'Documentary',
-    rating: 3,
+    title: 'Beauty & Beast',
+    genre: 'Sci-Fiction',
+    rating: 5,
   ),
 ];
