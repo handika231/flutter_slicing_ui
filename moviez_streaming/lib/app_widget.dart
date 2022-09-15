@@ -8,6 +8,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(),
       builder: (context, child) => ResponsiveWrapper.builder(
         child,
         maxWidth: 1200,
