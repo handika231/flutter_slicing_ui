@@ -53,6 +53,38 @@ class SearchPage extends StatelessWidget {
                       return _searchResultContent(data);
                     },
                   ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Center(
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        height: 50,
+                        width: 220,
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: blackColor.withOpacity(0.5),
+                              blurRadius: 6,
+                              offset: const Offset(0, 5),
+                            ),
+                          ],
+                          color: blackColor,
+                          borderRadius: BorderRadius.circular(37),
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Suggest Movie',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: medium,
+                            color: whiteColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
