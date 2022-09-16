@@ -40,3 +40,24 @@ List<MovieModel> listFromDisney = [
     rating: 5,
   ),
 ];
+
+List<MovieModel> listOfResult = [
+  MovieModel(
+    image: 'assets/img-dark.png',
+    title: 'The Dark II',
+    genre: 'Horror',
+    rating: 4,
+  ),
+  MovieModel(
+    image: 'assets/img-knight.png',
+    title: 'The Dark Knight',
+    genre: 'Heroes',
+    rating: 5,
+  ),
+  MovieModel(
+    image: 'assets/img-tower.png',
+    title: 'The Dark Tower',
+    genre: 'Action',
+    rating: 4,
+  ),
+];

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:moviez_streaming/common/constant.dart';
 import 'package:moviez_streaming/model/movie_model.dart';
+import 'package:moviez_streaming/routes/navigation.dart';
+
+import 'search_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -99,7 +102,9 @@ class HomePage extends StatelessWidget {
             ],
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigation.navigateTo(const SearchPage());
+            },
             icon: const Icon(
               Icons.search,
               size: 40,

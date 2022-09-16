@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:moviez_streaming/page/home_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import 'routes/navigation.dart';
+
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       theme: ThemeData(),
       builder: (context, child) => ResponsiveWrapper.builder(
         child,
