@@ -12,7 +12,6 @@ class Application extends StatelessWidget {
       splitScreenMode: true,
       minTextAdapt: true,
       builder: (context, child) {
-        print(child);
         return MaterialApp(
           title: 'My Doctor',
           theme: ThemeData(
