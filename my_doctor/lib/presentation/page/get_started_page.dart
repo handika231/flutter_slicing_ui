@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_doctor/common/constant.dart';
 
+import '../widgets/custom_button.dart';
+
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
 
@@ -54,43 +56,16 @@ class GetStartedPage extends StatelessWidget {
             right: 0,
             child: Column(
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: Size(275.w, 45.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    backgroundColor: AppStyle.cyanColor,
-                  ),
-                  child: Text(
-                    'Get Started',
-                    style: TextStyle(
-                      color: AppStyle.whiteColor,
-                      fontSize: 18.sp,
-                      fontWeight: AppStyle.semiBold,
-                    ),
-                  ),
-                  onPressed: () {},
-                ),
+                CustomButton(
+                    color: AppStyle.cyanColor,
+                    onPressed: () {},
+                    text: 'Get Started'),
                 SizedBox(
                   height: 16.h,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: Size(275.w, 45.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    backgroundColor: AppStyle.whiteColor,
-                  ),
-                  child: Text(
-                    'Sign In',
-                    style: TextStyle(
-                      color: AppStyle.blackColor,
-                      fontSize: 18.sp,
-                      fontWeight: AppStyle.semiBold,
-                    ),
-                  ),
+                CustomButton(
+                  color: AppStyle.whiteColor,
+                  text: 'Sign In',
                   onPressed: () {},
                 ),
               ],
