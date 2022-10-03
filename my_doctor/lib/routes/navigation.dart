@@ -4,6 +4,7 @@ import 'package:my_doctor/presentation/page/home_page.dart';
 import 'package:my_doctor/presentation/page/sign_in_page.dart';
 
 import '../presentation/page/get_started_page.dart';
+import '../presentation/page/hospital_page.dart';
 import '../presentation/page/sign_up_page.dart';
 
 class Navigation {
@@ -28,6 +29,13 @@ class Navigation {
         name: 'Home',
         builder: (context, state) {
           return const HomePage();
+        },
+      ),
+      GoRoute(
+        path: '/hospital-page',
+        name: 'Hospital Page',
+        builder: (context, state) {
+          return const HospitalPage();
         },
       ),
       GoRoute(
