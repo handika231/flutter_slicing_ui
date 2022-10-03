@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_doctor/common/constant.dart';
 
 import '../widgets/custom_button.dart';
@@ -31,10 +32,13 @@ class GetStartedPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  'assets/logo.png',
-                  width: 80.w,
-                  height: 75.h,
+                Hero(
+                  tag: 'logo',
+                  child: Image.asset(
+                    'assets/logo.png',
+                    width: 80.w,
+                    height: 75.h,
+                  ),
                 ),
                 SizedBox(
                   height: 90.h,
@@ -57,16 +61,21 @@ class GetStartedPage extends StatelessWidget {
             child: Column(
               children: [
                 CustomButton(
-                    color: AppStyle.cyanColor,
-                    onPressed: () {},
-                    text: 'Get Started'),
+                  textColor: AppStyle.whiteColor,
+                  color: AppStyle.cyanColor,
+                  onPressed: () {},
+                  text: 'Get Started',
+                ),
                 SizedBox(
                   height: 16.h,
                 ),
                 CustomButton(
+                  textColor: AppStyle.blackColor,
                   color: AppStyle.whiteColor,
                   text: 'Sign In',
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push('/sign-in');
+                  },
                 ),
               ],
             ),
