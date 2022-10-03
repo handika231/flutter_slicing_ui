@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:my_doctor/presentation/page/home_page.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:my_doctor/routes/navigation.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});
@@ -12,12 +13,13 @@ class Application extends StatelessWidget {
       splitScreenMode: true,
       minTextAdapt: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           title: 'My Doctor',
           theme: ThemeData(
-            primarySwatch: Colors.cyan,
+            textTheme: GoogleFonts.nunitoTextTheme(),
           ),
-          home: const HomePage(),
+          routerConfig: Navigation.router,
         );
       },
     );
