@@ -85,6 +85,7 @@ class _SignInPageState extends State<SignInPage> {
                     height: 24.h,
                   ),
                   TextFormField(
+                    obscureText: true,
                     validator: (value) => value?.isNotEmpty == true
                         ? null
                         : 'Password tidak boleh kosong',
