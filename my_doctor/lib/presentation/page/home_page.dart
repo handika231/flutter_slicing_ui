@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_doctor/common/constant.dart';
 import 'package:my_doctor/presentation/page/hospital_page.dart';
+import 'package:my_doctor/presentation/page/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,11 +19,7 @@ class _HomePageState extends State<HomePage> {
       ),
     ),
     const HospitalPage(),
-    const Scaffold(
-      body: Center(
-        child: Text('Chat'),
-      ),
-    ),
+    const ProfilePage(),
   ];
   onChangeIndex(int index) {
     setState(() {

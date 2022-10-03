@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_doctor/presentation/page/home_page.dart';
+import 'package:my_doctor/presentation/page/profile_page.dart';
 import 'package:my_doctor/presentation/page/sign_in_page.dart';
 
 import '../presentation/page/get_started_page.dart';
@@ -50,6 +51,13 @@ class Navigation {
         name: 'Sign Up',
         builder: (context, state) {
           return const SignUpPage();
+        },
+      ),
+      GoRoute(
+        path: '/profile',
+        name: 'Profile',
+        builder: (context, state) {
+          return const ProfilePage();
         },
       ),
     ],
