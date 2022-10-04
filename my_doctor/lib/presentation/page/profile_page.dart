@@ -16,12 +16,20 @@ class _ProfilePageState extends State<ProfilePage> {
   Image? _image;
 
   void captureImage() async {
-    final XFile? image = await _picker.pickImage(source: ImageSource.camera);
-    setState(() {
-      _image = Image.file(
-        File(image!.path),
+    try {
+      final XFile? image = await _picker.pickImage(source: ImageSource.camera);
+      setState(() {
+        _image = Image.file(
+          File(image!.path),
+        );
+      });
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Gagal Mengambil Gambar'),
+        ),
       );
-    });
+    }
   }
 
   @override

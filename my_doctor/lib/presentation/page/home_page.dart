@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_doctor/common/constant.dart';
+import 'package:my_doctor/presentation/page/doctor_page.dart';
 import 'package:my_doctor/presentation/page/hospital_page.dart';
 import 'package:my_doctor/presentation/page/profile_page.dart';
 
@@ -13,11 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    const Scaffold(
-      body: Center(
-        child: Text('Home'),
-      ),
-    ),
+    const DoctorPage(),
     const HospitalPage(),
     const ProfilePage(),
   ];
