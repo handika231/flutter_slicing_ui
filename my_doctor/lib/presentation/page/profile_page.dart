@@ -36,99 +36,102 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              margin: const EdgeInsets.only(top: 30),
-              child: Text(
-                'Profile Page',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: AppStyle.semiBold,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                margin: const EdgeInsets.only(top: 30),
+                child: Text(
+                  'Profile Page',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: AppStyle.semiBold,
+                  ),
                 ),
               ),
-            ),
-            GestureDetector(
-              onTap: () {
-                captureImage();
-              },
-              child: Container(
-                height: 130,
-                width: 130,
+              GestureDetector(
+                onTap: () {
+                  captureImage();
+                },
+                child: Container(
+                  height: 130,
+                  width: 130,
+                  margin: const EdgeInsets.only(
+                    top: 40,
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: _image == null
+                          ? const AssetImage('assets/upload_photo.png')
+                          : _image!.image,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
                 margin: const EdgeInsets.only(
-                  top: 40,
+                  top: 16,
                 ),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: _image == null
-                        ? const AssetImage('assets/upload_photo.png')
-                        : _image!.image,
-                    fit: BoxFit.cover,
-                  ),
+                child: Column(
+                  children: [
+                    Text(
+                      'User Profile',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: AppStyle.semiBold,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      'Software Engineer',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: AppStyle.light,
+                      ),
+                    )
+                  ],
                 ),
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                top: 16,
-              ),
-              child: Column(
-                children: [
-                  Text(
-                    'User Profile',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: AppStyle.semiBold,
+              Container(
+                margin: const EdgeInsets.only(top: 30),
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: const Text('Edit Profile'),
+                      subtitle: const Text('Update your profile'),
+                      trailing: const Icon(Icons.chevron_right),
+                      leading: Icon(Icons.person, color: AppStyle.cyanColor),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    'Software Engineer',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: AppStyle.light,
+                    ListTile(
+                      title: const Text('Language'),
+                      subtitle: const Text('Available in English'),
+                      trailing: const Icon(Icons.chevron_right),
+                      leading: Icon(Icons.language, color: AppStyle.cyanColor),
                     ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 30),
-              child: Column(
-                children: [
-                  ListTile(
-                    title: const Text('Edit Profile'),
-                    subtitle: const Text('Update your profile'),
-                    trailing: const Icon(Icons.chevron_right),
-                    leading: Icon(Icons.person, color: AppStyle.cyanColor),
-                  ),
-                  ListTile(
-                    title: const Text('Language'),
-                    subtitle: const Text('Available in English'),
-                    trailing: const Icon(Icons.chevron_right),
-                    leading: Icon(Icons.language, color: AppStyle.cyanColor),
-                  ),
-                  ListTile(
-                    title: const Text('Give Us Rate'),
-                    subtitle: const Text('On Google Play Store'),
-                    trailing: const Icon(Icons.chevron_right),
-                    leading: Icon(Icons.star_border, color: AppStyle.cyanColor),
-                  ),
-                  ListTile(
-                    title: const Text('Help Center'),
-                    subtitle: const Text('Read our guidelines'),
-                    trailing: const Icon(Icons.chevron_right),
-                    leading:
-                        Icon(Icons.document_scanner, color: AppStyle.cyanColor),
-                  ),
-                ],
-              ),
-            )
-          ],
+                    ListTile(
+                      title: const Text('Give Us Rate'),
+                      subtitle: const Text('On Google Play Store'),
+                      trailing: const Icon(Icons.chevron_right),
+                      leading:
+                          Icon(Icons.star_border, color: AppStyle.cyanColor),
+                    ),
+                    ListTile(
+                      title: const Text('Help Center'),
+                      subtitle: const Text('Read our guidelines'),
+                      trailing: const Icon(Icons.chevron_right),
+                      leading: Icon(Icons.document_scanner,
+                          color: AppStyle.cyanColor),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
